@@ -1,0 +1,7 @@
+/** @format */
+
+.row > div {
+  background: pink;
+  min-height: 10rem;
+  border: 1px solid grey;
+}
