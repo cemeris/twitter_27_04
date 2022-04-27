@@ -38,14 +38,42 @@ nav a {
 }
 
 .wraper {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 13.25em 1fr 346px;
-      grid-template-columns: 13.25em 1fr 346px;
-  grid-gap: 31px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 31px;
   width: 1230px;
   padding: 0 15px;
   margin: auto;
+}
+
+.section_right {
+  width: 346px;
+}
+
+.sidebar {
+  width: 13.25em;
+}
+
+.sidebar--open {
+  width: 3.25em;
+}
+
+.sidebar--open .sidebar__navigation a svg {
+  margin: 0;
+}
+
+.sidebar--open .sidebar__navigation span {
+  display: none;
+}
+
+.sidebar--open .sidebar__toggle {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transition: -webkit-transform 2s;
+  transition: -webkit-transform 2s;
+  transition: transform 2s;
+  transition: transform 2s, -webkit-transform 2s;
 }
 
 .sidebar__logo {
@@ -138,6 +166,10 @@ nav a {
   height: 1.875em;
   border: 0.1875em solid #fff;
   border-radius: 50%;
+  -webkit-transition: -webkit-transform 2s;
+  transition: -webkit-transform 2s;
+  transition: transform 2s;
+  transition: transform 2s, -webkit-transform 2s;
 }
 
 @media screen and (max-width: 600px) {
